@@ -1,0 +1,136 @@
+@media (min-width: 600px){
+$primary: #ffffff;
+ion-content {
+  --background: $primary;
+}
+    .presentacion, 
+.presentacion * {
+  box-sizing: border-box;
+}
+
+.presentacion {
+  background: #ffffff;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#adorno,
+#adorno2 {
+  width: auto; 
+  height: auto;
+  position: absolute;
+  overflow: visible;  
+}
+
+#adorno {
+  left: -11%;
+  top: 50%;
+  transform: translate(70px, -224px);
+}
+
+#welcome-back {
+  color: #000000;
+  text-align: left;
+  font-family: 'Inter-Bold', sans-serif;
+  font-size: 700%;
+  font-weight: 700; 
+  position: absolute;
+  left: 5%;
+  top: 33%;
+  width: 80%;
+}
+
+ion-button {
+  width: 40%;
+  height: 10%;
+  position: absolute; 
+  left: 35%;
+  top: 60%;
+  font-family: 'Inter-Bold', sans-serif;
+  font-size: 200%;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.adorno2 {
+  height: auto;
+  position: absolute;
+  right: 0; 
+  top: 60%;
+  transform: translate(0, 0);
+  overflow: visible;
+}
+
+}
+
+@media (max-width: 600px){
+  $primary: #ffffff;
+ion-content {
+  --background: $primary;
+}
+
+    .presentacion, 
+.presentacion * {
+  box-sizing: border-box;
+}
+
+.presentacion {
+  background: #ffffff;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#adorno,
+#adorno2 {
+  width: auto; 
+  height: auto;
+  position: absolute;
+  overflow: visible;  
+}
+
+#adorno {
+  left: -11%;
+  top: 50%;
+  transform: translate(70px, -224px);
+}
+
+#welcome-back {
+  color: #000000;
+  text-align: left;
+  font-family: 'Inter-Bold', sans-serif;
+  font-size: 420%;
+  font-weight: 700; 
+  position: absolute;
+  left: 5%;
+  top: 30%;
+  width: 80%;
+}
+
+ion-button {
+  background: #515151;
+  border-radius: 100%;
+  width: 45%;
+  height: 10%;
+  position: absolute; 
+  left: 35%;
+  top: 70%;
+  font-family: 'Inter-Bold', sans-serif;
+  font-size: 200%;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.adorno2 {
+  height: auto;
+  position: absolute;
+  right: 0; 
+  top: 60%;
+  transform: translate(0, 0);
+  overflow: visible;
+}
+
+}

@@ -1,0 +1,35 @@
+<ion-content class="registro-de-usuario">
+  <svg class="adorno" viewBox="0 0 375 226" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M-70 65.5C-70 65.5 1 27.5004 188.5 111C376 194.5 405.5 118 405.5 118L376 -124H1L-70 65.5Z" fill="black" fill-opacity="0.5"/>
+    <path d="M445 113.112C445 113.112 373.925 62.3561 186.228 173.886C-1.46899 285.415 -31 183.235 -31 183.235L-1.46899 -140H373.925L445 113.112Z" fill="black" fill-opacity="0.5"/>
+  </svg>
+
+  <ion-label class="ellipse"></ion-label>
+  <img src="business-3-d-young-man-in-formalwear-standing-with-hands-on-hip-10.png" />
+
+  <ion-card>
+    <form #formulario>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label floating>Correo</ion-label>
+            <ion-input type="email" required name="correo" ngModel></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label floating>Contraseña</ion-label>
+            <ion-input type="password" required name="clave" ngModel></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-card>
+
+  <ion-label class="inicioSesion" [routerLink]="['../inicio-sesion']"> ¿No tienes una cuenta? Registrate aquí </ion-label> 
+
+  <ion-button color="medium"  [routerLink]="['../navegacion']" >Login</ion-button>
+
+</ion-content>
