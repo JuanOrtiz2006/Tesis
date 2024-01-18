@@ -17,15 +17,7 @@ ion-content {
     transform: translate(70px, -226px);
     overflow: visible;
     }
- .ellipse {
-    background: #ffffff;
-    border-radius: 50%;
-    width: 34%;
-    height: 22%;
-    position: absolute;
-    left: 35%;
-    top: 24%;
-    }
+ 
     img
     {
     width: 50%;
@@ -33,6 +25,7 @@ ion-content {
     position: absolute;
     left: 39.5%;
     top: 27%;
+    border-radius: 50%;
     }
     ion-card{
       position: relative;
@@ -95,15 +88,6 @@ ion-content {
     transform: translate(70px, -226px);
     overflow: visible;
     }
- .ellipse {
-    background: #ffffff;
-    border-radius: 50%;
-    width: 34%;
-    height: 22%;
-    position: absolute;
-    left: 35%;
-    top: 14%;
-    }
     img
     {
     width: 50%;
@@ -111,6 +95,7 @@ ion-content {
     position: absolute;
     left: 39.5%;
     top: 17%;
+    border-radius: 50%;
     }
     ion-card{
       position: relative;

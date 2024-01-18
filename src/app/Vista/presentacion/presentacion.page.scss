@@ -1,26 +1,30 @@
-@media (min-width: 600px){
+// Variables 
 $primary: #ffffff;
-ion-content {
+
+// Estilos generales
+ion-content, ion-header {
   --background: $primary;
-}
-    .presentacion, 
-.presentacion * {
-  box-sizing: border-box;
 }
 
 .presentacion {
-  background: #ffffff;
+  background: $primary;
   width: 100%;
   height: 100%;
-  position: relative;
+  position: relative;  
 }
 
-#adorno,
-#adorno2 {
+// Header 
+ion-header {
+  background-color: white;
+  height: 0%;
+}
+
+// Adornos
+#adorno, #adorno2 {
   width: auto; 
-  height: auto;
+  height: 100%;
   position: absolute;
-  overflow: visible;  
+  overflow: visible; 
 }
 
 #adorno {
@@ -29,108 +33,71 @@ ion-content {
   transform: translate(70px, -224px);
 }
 
+// Contenido
 #welcome-back {
   color: #000000;
   text-align: left;
   font-family: 'Inter-Bold', sans-serif;
-  font-size: 700%;
-  font-weight: 700; 
+  font-weight: 700;
+  font-size: 800%; 
   position: absolute;
   left: 5%;
-  top: 33%;
-  width: 80%;
+  top: 8%;
+  width: 80%; 
 }
-
-ion-button {
+.boton, .ActBluet {
   width: 40%;
-  height: 10%;
-  position: absolute; 
-  left: 35%;
-  top: 60%;
+  height: 10%; 
   font-family: 'Inter-Bold', sans-serif;
   font-size: 200%;
   display: flex;
   align-items: center;
-  justify-content: center
+  justify-content: center;  
 }
 
-.adorno2 {
-  height: auto;
+.boton {
   position: absolute;
-  right: 0; 
-  top: 60%;
-  transform: translate(0, 0);
-  overflow: visible;
+  left: 35%;
+  top: 35%; 
 }
 
-}
-
-@media (max-width: 600px){
-  $primary: #ffffff;
-ion-content {
-  --background: $primary;
-}
-
-    .presentacion, 
-.presentacion * {
-  box-sizing: border-box;
-}
-
-.presentacion {
-  background: #ffffff;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-#adorno,
-#adorno2 {
-  width: auto; 
-  height: auto;
+.ActBluet {
   position: absolute;
-  overflow: visible;  
-}
-
-#adorno {
-  left: -11%;
+  left: 35%;
   top: 50%;
-  transform: translate(70px, -224px);
 }
-
-#welcome-back {
-  color: #000000;
-  text-align: left;
-  font-family: 'Inter-Bold', sans-serif;
-  font-size: 420%;
-  font-weight: 700; 
-  position: absolute;
-  left: 5%;
-  top: 30%;
-  width: 80%;
-}
-
-ion-button {
-  background: #515151;
-  border-radius: 100%;
-  width: 45%;
-  height: 10%;
-  position: absolute; 
-  left: 35%;
-  top: 70%;
-  font-family: 'Inter-Bold', sans-serif;
-  font-size: 200%;
-  display: flex;
-  align-items: center;
-  justify-content: center
-}
-
+// Footer
 .adorno2 {
-  height: auto;
   position: absolute;
-  right: 0; 
+  right: 0;
   top: 60%;
   transform: translate(0, 0);
-  overflow: visible;
+  overflow: visible; 
 }
+
+// Media queries
+@media (max-width: 600px){
+
+  #welcome-back {
+    font-size: 420%;
+  }
+  
+  .boton, .ActBluet {
+    top: 45%;
+    border-radius: 100%;
+    width: 47%;
+    height: 10%;
+    font-size: 190%; 
+  }
+
+  .ActBluet
+  {
+    top: 30%;
+  }
+
+  #adorno, #adorno2 {
+    height: auto;
+  }
+
 
 }

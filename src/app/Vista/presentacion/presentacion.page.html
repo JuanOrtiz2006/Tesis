@@ -1,15 +1,25 @@
-<ion-content class="presentacion">
-
+<ion-header>
   <svg class="adorno"  viewBox="0 0 375 224" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M-70 63.5C-70 63.5 1 25.5004 188.5 109C376 192.5 405.5 116 405.5 116L376 -126H1L-70 63.5Z" fill="black" fill-opacity="0.5"/>
     <path d="M445 111.112C445 111.112 373.925 60.3561 186.228 171.886C-1.46899 283.415 -31 181.235 -31 181.235L-1.46899 -142H373.925L445 111.112Z" fill="black" fill-opacity="0.5"/>
-    </svg>
+  </svg>
+</ion-header>
 
+<ion-content class="presentacion">
   <ion-label id="welcome-back"> Welcome Back! </ion-label>
-  
-  <ion-button color="medium"  [routerLink]="['../registro-usuario']">Empezar</ion-button>
+    <ion-button class="boton" color="medium"  [routerLink]="['../registro-usuario']" >Empezar</ion-button>
+    <ion-button class="ActBluet" color="medium" (click)="ActivarBluetooth()">Buscar</ion-button>
+
+    <ion-label *ngFor="let datos of dispositivos">
+      <p>{{datos.name}}</p>
+      <p>{{datos.id}}</p>
+      <ion-button (click)="Conectar(datos.address)">Conectar</ion-button>
+    </ion-label>
+</ion-content>
+
+<ion-label class="PieP">
   <svg class="adorno2" viewBox="0 0 375 200" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M445 160.5C445 160.5 374 198.5 186.5 115C-1 31.4996 -30.5 108 -30.5 108L-1 350L374 350L445 160.5Z" fill="black" fill-opacity="0.5"/>
     <path d="M-70 112.888C-70 112.888 1.07466 163.644 188.772 52.1143C376.469 -59.4152 406 42.7651 406 42.7651L376.469 366L1.07466 366L-70 112.888Z" fill="black" fill-opacity="0.5"/>
-    </svg>
-</ion-content>
+  </svg>
+</ion-label>

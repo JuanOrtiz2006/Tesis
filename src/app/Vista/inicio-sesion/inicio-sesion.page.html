@@ -1,8 +1,11 @@
-<ion-content class="inicioSesion">
+<ion-header>
   <svg class="adorno"  viewBox="0 0 375 226" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M-70 65.4999C-70 65.4999 1 27.5004 188.5 111C376 194.5 405.5 118 405.5 118L376 -124H1L-70 65.4999Z" fill="black" fill-opacity="0.5"/>
     <path d="M445 113.112C445 113.112 373.925 62.3561 186.228 173.886C-1.46899 285.415 -31 183.235 -31 183.235L-1.46899 -140H373.925L445 113.112Z" fill="black" fill-opacity="0.5"/>
   </svg>
+</ion-header>
+
+<ion-content class="inicioSesion">
   <ion-card>
     <form #formulario>
       <ion-row>
@@ -40,8 +43,11 @@
     </form>
   </ion-card>
   <ion-button color="medium"  [routerLink]="['../navegacion']" >Login</ion-button>
+</ion-content>
+
+<ion-label>
   <svg class="adorno2" viewBox="0 0 375 200" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M445 160.5C445 160.5 374 198.5 186.5 115C-1 31.4996 -30.5 108 -30.5 108L-1 350L374 350L445 160.5Z" fill="black" fill-opacity="0.5"/>
     <path d="M-70 112.888C-70 112.888 1.07466 163.644 188.772 52.1143C376.469 -59.4152 406 42.7651 406 42.7651L376.469 366L1.07466 366L-70 112.888Z" fill="black" fill-opacity="0.5"/>
     </svg>
-</ion-content>
+</ion-label>

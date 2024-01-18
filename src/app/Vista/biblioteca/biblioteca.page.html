@@ -1,29 +1,9 @@
-<ion-menu side="end" contentId="main-content2">
-  <ion-header>
-    <ion-label class="ellipse"></ion-label>
-    <img src="business-3-d-young-man-in-formalwear-standing-with-hands-on-hip-10.png" />    
-  </ion-header>
-  <ion-content class="ion-padding">
-    <ion-toggle [enableOnOffLabels]="true">Enable Notifications</ion-toggle>
-  </ion-content>
-</ion-menu>
-<div class="ion-page" id="main-content2">
-    <ion-toolbar>
-      <ion-label class="ellipse"></ion-label>
-    <img src="business-3-d-young-man-in-formalwear-standing-with-hands-on-hip-10.png" />
-      <ion-buttons slot="end">
-        <ion-menu-button></ion-menu-button>
-      </ion-buttons>
-    </ion-toolbar>
-  <ion-content class="ion-padding">
-    <ion-label>
-      <app-com-inicio [titulo]="'Continuar aprendizaje'"></app-com-inicio>
-    </ion-label>
-    <ion-label>
-      <app-com-inicio [titulo]="'Biblioteca Acordes'" (click)="irAPagina('../biblioteca-acordes')"></app-com-inicio>
-    </ion-label>
-    <ion-label>
-      <app-com-inicio [titulo]="'Escalas'" (click)="irAPagina2('../escalas')"></app-com-inicio>
-    </ion-label>
-  </ion-content>
-</div>
+
+<ion-header>
+  <img src="business-3-d-young-man-in-formalwear-standing-with-hands-on-hip-10.png" />
+</ion-header>
+<ion-content class="inicio">
+  <div class="ion-page" >
+    <app-com-inicio *ngFor="let tarjeta of tarjetas" [titulo]=tarjeta.titulo [imagen]=tarjeta.imagen (click)=tarjeta.click()></app-com-inicio>
+  </div>
+</ion-content>

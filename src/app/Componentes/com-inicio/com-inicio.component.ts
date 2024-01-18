@@ -8,7 +8,9 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ComInicioComponent  implements OnInit {
 
   @Input() titulo: string="";
-  @Input() image: string="";
+  @Input() imagen: string="";
+  @Input() click: string="";
+
   constructor() { }
 
   ngOnInit() {}

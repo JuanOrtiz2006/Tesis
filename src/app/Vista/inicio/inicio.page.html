@@ -1,37 +1,9 @@
+<ion-header>
+  <img src="business-3-d-young-man-in-formalwear-standing-with-hands-on-hip-10.png" />
+</ion-header>
 <ion-content class="inicio">
-  <ion-menu side="end" contentId="main-content">
-    <ion-header>
-      <ion-label class="ellipse"></ion-label>
-      <img src="business-3-d-young-man-in-formalwear-standing-with-hands-on-hip-10.png" />    
-    </ion-header>
-    <ion-content class="ion-padding">
-      <ion-toggle [enableOnOffLabels]="true">Enable Notifications</ion-toggle>
-    </ion-content>
-  </ion-menu>
-  <div class="ion-page" id="main-content">
-      <ion-toolbar>
-        <ion-label class="ellipse"></ion-label>
-      <img src="business-3-d-young-man-in-formalwear-standing-with-hands-on-hip-10.png" />
-        <ion-buttons slot="end">
-          <ion-menu-button></ion-menu-button>
-        </ion-buttons>
-      </ion-toolbar>
-    <ion-content class="ion-padding">
-      <ion-label>
-        <app-com-inicio [titulo]="'Facil'"></app-com-inicio>
-      </ion-label>
-      <ion-label>
-        <app-com-inicio [titulo]="'Medio'" ></app-com-inicio>
-      </ion-label>
-      <ion-label>
-        <app-com-inicio [titulo]="'Dificil'" ></app-com-inicio>
-      </ion-label>
-    </ion-content>
-  </div>
-
-  <div *ngFor="data of Devices">
-    <p>{{data.name}}</p>
-    <p>{{data.id}}</p>
+  <div class="ion-page" >
+    <app-com-inicio *ngFor="let tarjeta of tarjetas" [titulo]=tarjeta.titulo [imagen]=tarjeta.imagen ></app-com-inicio>
   </div>
 </ion-content>
 

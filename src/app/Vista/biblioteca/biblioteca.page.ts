@@ -7,11 +7,31 @@ import { Router } from '@angular/router';
 })
 export class BibliotecaPage implements OnInit {
   irAPagina(ruta: string) {
-    this.router.navigate(['../biblioteca-acordes']);
+    this.router.navigate([ruta]); 
   }
+  
   irAPagina2(ruta: string) {
-    this.router.navigate(['../escalas']);
+    this.router.navigate([ruta]);  
   }
+  
+  tarjetas = [
+    {
+      titulo: "Continuar con el aprenizaje", 
+      imagen: "", 
+      click: () => this.irAPagina('../biblioteca-acordes')
+    },
+    {
+      titulo: "Biblioteca acordes", 
+      imagen: "", 
+      click: () => this.irAPagina('../biblioteca-acordes')
+    },
+    {
+      titulo: "Escalas", 
+      imagen: "", 
+      click: () => this.irAPagina2('../escalas')
+    }
+  ]
+  
   constructor(private router: Router) {
     
    }

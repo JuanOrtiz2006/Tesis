@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { PresentacionPageRoutingModule } from './presentacion-routing.module';
-
+import { BluetoothSerial } from '@awesome-cordova-plugins/bluetooth-serial/ngx';
 import { PresentacionPage } from './presentacion.page';
 
 @NgModule({
@@ -15,6 +15,9 @@ import { PresentacionPage } from './presentacion.page';
     IonicModule,
     PresentacionPageRoutingModule
   ],
-  declarations: [PresentacionPage]
+  declarations: [PresentacionPage],
+  providers: [
+    BluetoothSerial
+  ]
 })
 export class PresentacionPageModule {}
