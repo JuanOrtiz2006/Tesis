@@ -22,14 +22,27 @@
       <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6">
         <ion-button class="ActBluet" color="medium" (click)="ActivarBluetooth()">Buscar</ion-button>
       </ion-col>
-      <!--Mostrar datos-->
-      <ion-col *ngFor="let dato of dispositivos">
-          <ion-label>{{dato.name}}</ion-label>
-          <ion-label>{{dato.id}}</ion-label>
-          <ion-button (click)="Conectar(dato.address)">Conectar</ion-button>
+    </ion-row>
+    <ion-row>
+      <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6">
+        <ion-button (click)="ListaDispositivos()">Mostrar Lista de Dispositivos</ion-button>
       </ion-col>
+      <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6">
+        <ion-button (click)="enviarDato()">Enviar Datos al ESP32</ion-button>
+      </ion-col>
+      <ion-col *ngFor="let dato of dispositivos">
+        <ion-label>{{dato.name}}</ion-label>
+        <ion-label>{{dato.id}}</ion-label>
+        <ion-button (click)="Conectar(dato.address)">Conectar</ion-button>
+    </ion-col>
     </ion-row>
   </ion-grid>    
+
+   <!-- Botón para mostrar la lista de dispositivos -->
+
+
+   <!-- Botón para enviar datos al ESP32 -->
+   
 </ion-content>
 
   
