@@ -32,10 +32,10 @@ export class PresentacionPage implements OnInit {
   pairedListDevice(){
     this.bluetoothSerial.list().then(success=>{
       this.pairedList = success;
-      this.listToggle = true;
+      this.listToggle = false;
     },error=>{
       this.showError("Por favor, activar bluetooth ");
-      this.listToggle = false;
+      this.listToggle = true;
     })
   }
 
