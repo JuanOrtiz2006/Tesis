@@ -18,9 +18,33 @@
       <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" >
         <ion-button class="boton" color="medium"  [routerLink]="['../registro-usuario']" >Empezar</ion-button>
       </ion-col>
-      <!--Boton de buscar-->
-      <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6">
-        <ion-button class="ActBluet" color="medium" [routerLink]="['../nivel']">Buscar</ion-button>
+      <!--Lista de dispositivos-->
+      <ion-col size-sm="12" size-lg="12" size-md="12" size-xs="12">
+        <ion-button color="dark" (click)="pairedListDevice()"><ion-icon name="refresh"></ion-icon>&nbsp;Refresh Bluetooth Devices</ion-button>
+      </ion-col>
+      <ion-col size-sm="12" size-lg="12" size-md="12" size-xs="12">
+        <ion-list radio-group [(ngModel)]="pairedDevice" *ngIf="listToggle">
+          <ion-item *ngFor="let i of pairedList;let j=index">
+            <ion-label>{{i.name}}</ion-label>
+            <ion-radio value="{{j}}" ></ion-radio>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+      <ion-col size-sm="12" size-lg="12" size-md="12" size-xs="12">
+        <ion-button color="medium" *ngIf="listToggle" (click)="selectDevice()"><ion-icon name="bluetooth"></ion-icon>&nbsp;Connect Bluetooth Devices<ion-icon name="send"></ion-icon>&nbsp;Send Data Via Bluetooth</ion-button>
+      </ion-col>
+      <!--Ingreso de dato-->
+      <ion-col size-sm="12" size-lg="12" size-md="12" size-xs="12">
+        <ion-list>
+          <ion-item>
+            <ion-label floating>Dato a enviar:</ion-label>
+            <ion-input type="text" name="datasend" [(ngModel)]="dataSend"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+      <!--Enviar dato-->
+      <ion-col size-sm="12" size-lg="12" size-md="12" size-xs="12">
+        <ion-button color="medium" (click)="sendData()"><ion-icon name="send"></ion-icon>&nbsp;Send Data Via Bluetooth</ion-button>
       </ion-col>
     </ion-row>
     
