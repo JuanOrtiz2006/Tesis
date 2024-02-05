@@ -1,9 +1,15 @@
-
-<ion-header>
-  <img src="business-3-d-young-man-in-formalwear-standing-with-hands-on-hip-10.png" />
+<ion-header class="header">
+  <img src="../../../assets/Imagenes/usuarioIcono.png" />
 </ion-header>
 <ion-content class="inicio">
-  <div class="ion-page" >
-    <app-com-inicio *ngFor="let tarjeta of tarjetas" [titulo]=tarjeta.titulo [imagen]=tarjeta.imagen (click)=tarjeta.click()></app-com-inicio>
-  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="ion-page" >
+          <app-com-inicio *ngFor="let tarjeta of tarjetas" [titulo]=tarjeta.titulo [imagen]=tarjeta.imagen (click)="tarjeta.click()" ></app-com-inicio>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
+

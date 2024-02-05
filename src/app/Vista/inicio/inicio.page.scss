@@ -1,57 +1,22 @@
-@media (min-width: 600px){
-    $primary: #ffffff;
-    .inicio {
-      --background: $primary;
-    }
-    .inicio, .inicio * {
-        box-sizing: border-box;
-        }
-        .inicio {
-        background: #ffffff;
-        width: 100%;
-        height: 100%;
-        position: relative;
-        overflow: hidden;
-        }
-    
-        ion-header{
-            padding: 5%;
-        } 
- 
-    img
-    {
-        width: 45%;
-        height: 95%;
-        position: absolute;
-        left: 3%;
-        top: 3%;
-    }
-   
+// Variables 
+$primary: #ffffff;
+// Estilos generales
+ion-content, ion-header {
+  --background: $primary;
+}
+//Contenido
+.inicio {
+  background: $primary;
+  width: 100%;
+  height: 100%;
+  position: relative;  
 }
 
-@media (max-width: 600px){
-    $primary: #ffffff;
-    .inicio {
-      --background: $primary;
-    }
-
-        .inicio {
-        background: #ffffff;
-        width: 100%;
-        height: 100%;
-        position: relative;
-        overflow: hidden;
-        }
-    
-        ion-header{
-            padding: 5%;
-        } 
-    img
-    {
-        width: 45%;
-        height: 95%;
-        position: absolute;
-        left: 3%;
-        top: 3%;
-    }
+img {
+    position: relative;
+    top: 15%;
+    padding: 1%;
+    height: 60%;
+    width: 15%;
+    border-radius: 100%;
 }

@@ -1,110 +1,23 @@
-@media (min-width: 600px) {
-  // Cambiar variable primaria a blanco
-  $primary: #ffffff;
-
-  .inicioSesion {
-    --background: $primary;
-    background: $primary;
-    width: 100%;
-    height: 100%;
-    position: relative;
-  }
-
-  .adorno,
-  .adorno2 {
-    width: auto;
-    height: auto;
-    position: absolute;
-    overflow: visible;
-  }
-
-  .adorno2 {
-    right: 0;
-    top: 70%;
-    transform: translate(0, 0);
-  }
-
-  ion-card {
-    position: relative;
-    top: 20%;
-    left: 9%;
-    width: 80%;
-    height: auto;
-  }
-
-  ion-item {
-    text-align: center;
-    font-family: 'Inter-Bold', sans-serif;
-    font-size: 150%;
-    font-weight: 700;
-    position: relative;
-    width: 100%;
-    padding: 10%;
-  }
-
-  ion-button {
-    top: 20%;
-    left: 38%;
-    width: 25%;
-    height: 5%;
-    font-family: 'Inter-Bold', sans-serif;
-    font-size: 200%;
-    font-weight: 700;
-    position: relative;
-  }
+// Variables
+$primary: #ffffff;
+// Estilos generales
+ion-content,
+ion-header {
+  --background: $primary;
 }
-
-@media (max-width: 600px) {
-  $primary: #ffffff;
-
-  .inicioSesion {
-    --background: $primary;
-    background: $primary;
-    width: 100%;
-    height: 100%;
-    position: relative;
-  }
-
-  .adorno,
-  .adorno2 {
-    width: auto;
-    height: auto;
-    position: absolute;
-    overflow: visible;
-  }
-
-  .adorno2 {
-    right: 0;
-    top: 70%;
-    transform: translate(0, 0);
-  }
-
-  ion-card {
-    position: relative;
-    top: 25%;
-    left: 5%;
-    width: 80%;
-    height: auto;
-  }
-
-  ion-item {
-    text-align: center;
-    font-family: 'Inter-Bold', sans-serif;
-    font-size: 150%;
-    font-weight: 700;
-    position: relative;
-    width: 100%;
-  }
-
-  ion-button {
-    top: 25%;
-    left: 35%;
-    width: 25%;
-    height: 5%;
-    font-family: 'Inter-Bold', sans-serif;
-    font-size: 100%;
-    font-weight: 700;
-    position: relative;
-  }
+// Contenido
+.inicioSesion {
+  background: $primary;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
-
+//Adorno Superior
+.adorno {
+  overflow: visible;
+}
+//Boton de Login
+.Login {
+  width: 40%;
+  padding: 5%;
+}

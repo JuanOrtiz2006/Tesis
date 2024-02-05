@@ -17,7 +17,7 @@ import { PresentacionPage } from './presentacion.page';
   ],
   declarations: [PresentacionPage],
   providers: [
-    BluetoothSerial
+    BluetoothSerial//Bluetooth
   ]
 })
 export class PresentacionPageModule {}
