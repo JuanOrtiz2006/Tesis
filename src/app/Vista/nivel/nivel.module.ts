@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { NivelPageRoutingModule } from './nivel-routing.module';
 
 import { NivelPage } from './nivel.page';
+import { BluetoothSerial } from '@awesome-cordova-plugins/bluetooth-serial';
 
 @NgModule({
   imports: [
@@ -15,6 +16,7 @@ import { NivelPage } from './nivel.page';
     IonicModule,
     NivelPageRoutingModule
   ],
-  declarations: [NivelPage]
+  declarations: [NivelPage],
+  providers:[BluetoothSerial]
 })
 export class NivelPageModule {}
