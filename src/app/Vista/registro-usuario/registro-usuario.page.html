@@ -16,7 +16,7 @@
       <ion-col size-sm="12" size-lg="12" size-md="12" size-xs="12">
         <ion-card>
           <!--Formulario-->
-          <form #formulario>
+          <form #formulario="ngForm">
             <ion-grid>
               <ion-row>
                 <!--Correo-->
@@ -35,11 +35,11 @@
                 </ion-col>
                 <!--Creacion de Cuenta-->
                 <ion-col size-sm="12" size-lg="12" size-md="12" size-xs="12">
-                  <ion-label class="inicioSesion" [routerLink]="['../inicio-sesion']"> ¿No tienes una cuenta? Registrate aquí </ion-label> 
+                  <ion-button class="inicioSesion" color="medium" [routerLink]="['../inicio-sesion']" (click)="iniciarSesion(formulario)"> Iniciar Resion </ion-button> 
                 </ion-col>
                 <!--Boton de Verificacion-->
                 <ion-col size-sm="12" size-lg="12" size-md="12" size-xs="12">
-                  <ion-button class="Login" color="medium"  [routerLink]="['../navegacion']" >Login</ion-button>
+                  <ion-button class="Login" color="medium"  [routerLink]="['../navegacion']" (click)="registrarUsuario(formulario)">Registrarse</ion-button>
                   </ion-col>
               </ion-row>
             </ion-grid>

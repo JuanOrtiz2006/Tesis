@@ -12,6 +12,7 @@ export class AppComponent {
       apiKey: "AIzaSyDFylrfzKNrObhTmo5mMN4d2Rc4I_XiNDQ",
       authDomain: "registrousuario-4570a.firebaseapp.com"
     };
+
   }
   
 }

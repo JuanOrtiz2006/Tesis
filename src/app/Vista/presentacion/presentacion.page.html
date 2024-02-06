@@ -1,52 +1,27 @@
 <ion-content class="presentacion">
-  <!--<ion-grid>
+  <ion-grid>
     <ion-row>
-      Adorno superior
+      <!--Adorno superior-->
       <ion-col>
         <svg class="adorno"  viewBox="0 0 375 224" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M-70 63.5C-70 63.5 1 25.5004 188.5 109C376 192.5 405.5 116 405.5 116L376 -126H1L-70 63.5Z" fill="black" fill-opacity="0.5"/>
           <path d="M445 111.112C445 111.112 373.925 60.3561 186.228 171.886C-1.46899 283.415 -31 181.235 -31 181.235L-1.46899 -142H373.925L445 111.112Z" fill="black" fill-opacity="0.5"/>
         </svg>
       </ion-col>
-      Texto
+      <!--Texto-->
       <ion-col size-sm="12" size-lg="12" size-md="12" size-xs="12">
         <ion-label id="welcome-back"> 
           Welcome Back! 
         </ion-label>
       </ion-col>
-      Boton Empezar
+      <!--Boton Empezar-->
       <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" >
         <ion-button class="boton" color="medium"  [routerLink]="['../registro-usuario']" >Empezar</ion-button>
-      </ion-col>-->
-      <!--Lista de dispositivos
-      <ion-col size-sm="12" size-lg="12" size-md="12" size-xs="12">
-        <ion-button color="dark" (click)="pairedListDevice()"><ion-icon name="refresh"></ion-icon>&nbsp;Refresh Bluetooth Devices</ion-button>
       </ion-col>
-      <ion-col size-sm="12" size-lg="12" size-md="12" size-xs="12">
-        <ion-list radio-group [(ngModel)]="pairedDevice" *ngIf="listToggle">
-          <ion-item *ngFor="let i of pairedList;let j=index">
-            <ion-label>{{i.name}}</ion-label>
-            <ion-radio value="{{j}}" ></ion-radio>
-          </ion-item>
-        </ion-list>
-      </ion-col>
-      <ion-col size-sm="12" size-lg="12" size-md="12" size-xs="12">
-        <ion-button color="medium" *ngIf="listToggle" (click)="selectDevice()"><ion-icon name="bluetooth"></ion-icon>&nbsp;Connect Bluetooth Devices<ion-icon name="send"></ion-icon>&nbsp;Send Data Via Bluetooth</ion-button>
-      </ion-col>
-      Ingreso de dato-
-      <ion-col size-sm="12" size-lg="12" size-md="12" size-xs="12">
-        <ion-list>
-          <ion-item>
-            <ion-label floating>Dato a enviar:</ion-label>
-            <ion-input type="text" name="datasend" [(ngModel)]="dataSend"></ion-input>
-          </ion-item>
-        </ion-list>
-      </ion-col>
-      Enviar dato
-      <ion-col size-sm="12" size-lg="12" size-md="12" size-xs="12">
-        <ion-button color="medium" (click)="sendData()"><ion-icon name="send"></ion-icon>&nbsp;Send Data Via Bluetooth</ion-button>
-      </ion-col>
-  </ion-grid> -->
+    </ion-row>
+  </ion-grid> 
+
+  <!--
   <ion-grid>
     <ion-row>
       <ion-col>
@@ -76,7 +51,7 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-    
+    -->
     
 </ion-content>
 

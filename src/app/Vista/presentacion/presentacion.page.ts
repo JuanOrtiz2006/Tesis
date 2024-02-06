@@ -10,25 +10,29 @@ import { ToastController } from '@ionic/angular';
 })
 export class PresentacionPage implements OnInit {
  
-  pairedList!: any[];
-  listToggle: boolean = false;
+  //Variables para leer datos
+  pairedList!: any[]; //Lista de dispositivos
+  listToggle: boolean = false; //Detector de listado
   pairedDevice: number = 0;
-  dataSend: string = "";
-  dataRead: string = "";
+  dataSend: string = "";//Dato enviado
+  dataRead: string = "";//Dato leido
 
+  //Importacion de bluetooth
   constructor(private bluetoothSerial: BluetoothSerial, private toastCtrl: ToastController) {
     this.checkBluetooth()
   }
 
+  //Metodo para verificar la nonexion
   checkBluetooth(){
     this.bluetoothSerial.isEnabled().then(success=>{
-      this.showError("Bluetooth activado");
+      this.showError("Bluetooth activado"); // Si el bluetooth esta activado 
 
     },error=>{
-      this.showError("Por favor, activar bluetooth ")
+      this.showError("Por favor, activar bluetooth ")// Si no
     })
   }
-
+  
+  //Metodo para listado de dispositivos
   pairedListDevice(){
     this.bluetoothSerial.list().then(success=>{
       this.pairedList = success;
@@ -39,6 +43,7 @@ export class PresentacionPage implements OnInit {
     })
   }
 
+  //Metodo para seleccionar dispositivo
   selectDevice() {
     let connectedDevice = this.pairedList[this.pairedDevice];
     if (!connectedDevice.address) {
@@ -50,7 +55,7 @@ export class PresentacionPage implements OnInit {
 
     this.connect(address);
   }
-
+  //Metodo para la conexion
   connect(address: any) {
     // Attempt to connect device with specified address, call app.deviceConnected if success
     this.bluetoothSerial.connect(address).subscribe(success => {
@@ -60,7 +65,7 @@ export class PresentacionPage implements OnInit {
       this.showError("Error:Connecting to Device");
     });
   }
-
+  //Metodo para suscribirse a la red bluetooth
   deviceConnected() {
     // Subscribe to data receiving as soon as the delimiter is read
     this.bluetoothSerial.subscribe('\n').subscribe(success => {
@@ -70,7 +75,7 @@ export class PresentacionPage implements OnInit {
       this.showError(error);
     });
   }
-
+  //Metodo para desconectar el dispositivo
   deviceDisconnected() {
     // Unsubscribe from data receiving
     this.bluetoothSerial.disconnect();
@@ -80,7 +85,7 @@ export class PresentacionPage implements OnInit {
   handleData(data: any) {
     this.showError(data);
   }
-
+  //Metodo para envio de datos
   sendData() {
     this.dataSend+='\n';
     this.showError(this.dataSend);
@@ -91,7 +96,7 @@ export class PresentacionPage implements OnInit {
       this.showError(error)
     });
   }
-  
+  //Metodo para leer datos
   readData(){
     this.bluetoothSerial.read().then((data) =>{
       this.dataRead += data;
