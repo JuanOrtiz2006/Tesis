@@ -16,10 +16,6 @@ const routes: Routes = [
     loadChildren: () => import('./Vista/registro-usuario/registro-usuario.module').then( m => m.RegistroUsuarioPageModule)
   },
   {
-    path: 'inicio-sesion',
-    loadChildren: () => import('./Vista/inicio-sesion/inicio-sesion.module').then( m => m.InicioSesionPageModule)
-  },
-  {
     path: 'navegacion',
     loadChildren: () => import('./Vista/navegacion/navegacion.module').then( m => m.NavegacionPageModule)
   },
