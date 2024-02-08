@@ -6,9 +6,18 @@ import { InicioPage } from './inicio.page';
 const routes: Routes = [
   {
     path: '',
-    component: InicioPage
+    component: InicioPage,
+    children:[
+
+      {
+        path: 'nivel',
+        loadChildren: () => import('../nivel/nivel.module').then( m => m.NivelPageModule)
+      }
+
+    ]
     
   },
+  
  
 ];
 

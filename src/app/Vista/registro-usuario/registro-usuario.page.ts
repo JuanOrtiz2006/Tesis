@@ -33,7 +33,6 @@ registrarUsuario(formulario: NgForm) {
   this.AutenticacionService.registrarUsuario(formulario.value.correo, formulario.value.clave)
     .then((info) => {
       console.log("Usuario registrado");
-      // Redirige a la página de inicio o a la que desees después de registrar
     }).catch((error) => {
       console.log("Error al registrar usuario. Intente de nuevo");
       this.router.navigate(['../registro-usuario']); // Ajusta la ruta según tu estructura

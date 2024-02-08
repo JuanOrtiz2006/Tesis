@@ -10,9 +10,6 @@ export class BibliotecaPage implements OnInit {
     this.router.navigate([ruta]); 
   }
   
-  irAPagina2(ruta: string) {
-    this.router.navigate([ruta]);  
-  }
   
   tarjetas = [
     {
@@ -28,7 +25,7 @@ export class BibliotecaPage implements OnInit {
     {
       titulo: "Escalas", 
       imagen: "", 
-      click: () => this.irAPagina2('../escalas')
+      click: () => this.irAPagina('../escalas')
     }
   ]
   

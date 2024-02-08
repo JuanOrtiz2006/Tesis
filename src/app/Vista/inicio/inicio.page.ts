@@ -11,19 +11,19 @@ export class InicioPage implements OnInit {
   irAPagina(ruta: string) {
     this.router.navigate([]);
   }
-  irAPagina2(ruta: string) {
-    this.router.navigate([]);
-  }
 
   tarjetas=[
     {titulo: "Facil",
-     imagen: ""
+     imagen: "",
+     click: () => this.irAPagina('../biblioteca-acordes')
     },
     {titulo: "Medio",
-     imagen: ""
+     imagen: "",
+     click: () => this.irAPagina('../nivel')
     },
-    {titulo: "DIficil",
-     imagen: ""
+    {titulo: "Dificil",
+     imagen: "",
+     click: () => this.irAPagina('../nivel')
     }
     
   ]
@@ -31,9 +31,6 @@ export class InicioPage implements OnInit {
   constructor(private router: Router) 
   {
   }
-
-  
-
 
   ngOnInit() {
   }
