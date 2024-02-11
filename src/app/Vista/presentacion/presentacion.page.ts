@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { BluetoothSerial } from '@awesome-cordova-plugins/bluetooth-serial/ngx';
 import { ToastController } from '@ionic/angular';
 
@@ -17,6 +17,8 @@ export class PresentacionPage implements OnInit {
   constructor(private bluetoothSerial: BluetoothSerial, private toastCtrl: ToastController) {
     this.checkBluetooth();
   }
+
+  
 
   ngOnInit() {
   }

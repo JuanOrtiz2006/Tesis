@@ -11,6 +11,27 @@ ion-content, ion-header {
   height: 100%;
   position: relative;  
 }
+
+  video#videoFondo {
+    position: fixed;
+    top: 0;
+    left: -50%;
+    width: 100%;
+    height: -1%;
+    width: auto;
+    height: auto;
+    object-fit: cover; /* Esto asegura que el video cubra todo el contenedor sin deformarse */
+  z-index: -1;
+  }
+
+  .adorno,
+  #welcome-back,
+  .boton {
+    /* Estilos para asegurar que los demás elementos estén por encima del video */
+    position: relative;
+    z-index: 1;
+  }
+
 // Footer
 .adorno,.adorno2 {
   overflow: visible;
@@ -34,6 +55,18 @@ ion-content, ion-header {
 
 // Media queries
 @media (max-width: 600px){
+  video#videoFondo {
+    position: fixed;
+    top: 10%;
+    left: -49%;
+    max-width: 200%;
+    height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover; /* Esto asegura que el video cubra todo el contenedor sin deformarse */
+  z-index: -1;
+  }
+
 //Texto
   #welcome-back {
     font-size: 420%;
