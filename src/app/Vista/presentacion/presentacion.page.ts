@@ -1,6 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import { BluetoothSerial } from '@awesome-cordova-plugins/bluetooth-serial/ngx';
-import { ToastController } from '@ionic/angular';
+import { ToastController, NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-presentacion',
@@ -14,7 +14,7 @@ export class PresentacionPage implements OnInit {
   dataToSend: string = ""; 
   dataReceived: string = ""; 
 
-  constructor(private bluetoothSerial: BluetoothSerial, private toastCtrl: ToastController) {
+  constructor(private bluetoothSerial: BluetoothSerial, private toastCtrl: ToastController, private navCtrl: NavController) {
     this.checkBluetooth();
   }
 
@@ -49,6 +49,7 @@ export class PresentacionPage implements OnInit {
     this.bluetoothSerial.connect(this.pairedDevice.address).subscribe(() => {
       this.showAlert("Conectado al dispositivo");
       this.sendDataToESP32();
+      this.navCtrl.navigateForward('../registro-usuario')
     }, () => {
       this.showAlert("Error al conectar al dispositivo");
     });
