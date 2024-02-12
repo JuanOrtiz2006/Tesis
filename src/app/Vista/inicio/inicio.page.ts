@@ -14,15 +14,15 @@ export class InicioPage implements OnInit {
 
   tarjetas=[
     {titulo: "Facil",
-     imagen: "",
+     imagen: "../../../assets/Videos/Principiante.mp4",
      click: () => this.irAPagina('../biblioteca-acordes')
     },
     {titulo: "Medio",
-     imagen: "",
+     imagen: "../../../assets/Videos/Intermedio.mp4",
      click: () => this.irAPagina('../nivel')
     },
     {titulo: "Dificil",
-     imagen: "",
+     imagen: "../../../assets/Videos/Experto.mp4",
      click: () => this.irAPagina('../nivel')
     }
     

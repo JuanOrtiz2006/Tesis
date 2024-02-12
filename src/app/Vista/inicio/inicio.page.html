@@ -1,11 +1,11 @@
 <ion-header class="header">
-  <img src="../../../assets/Imagenes/usuarioIcono.png" />
+  <img src="../../../assets/Imagenes/Avatar.jpg" />
 </ion-header>
 <ion-content class="inicio">
   <ion-grid>
     <ion-row>
       <ion-col>
-        <div class="ion-page" >
+        <div  >
           <app-com-inicio *ngFor="let tarjeta of tarjetas" [titulo]=tarjeta.titulo [imagen]=tarjeta.imagen (click)="tarjeta.click()" ></app-com-inicio>
         </div>
       </ion-col>

@@ -14,17 +14,17 @@ export class BibliotecaPage implements OnInit {
   tarjetas = [
     {
       titulo: "Continuar con el aprenizaje", 
-      imagen: "", 
+      imagen: "../../../assets/Videos/Principiante.mp4", 
       click: () => this.irAPagina('../biblioteca-acordes')
     },
     {
       titulo: "Biblioteca acordes", 
-      imagen: "", 
+      imagen: "../../../assets/Videos/Intermedio.mp4", 
       click: () => this.irAPagina('../biblioteca-acordes')
     },
     {
       titulo: "Escalas", 
-      imagen: "", 
+      imagen: "../../../assets/Videos/Experto.mp4", 
       click: () => this.irAPagina('../escalas')
     }
   ]
