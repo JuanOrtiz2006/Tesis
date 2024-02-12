@@ -14,52 +14,9 @@ ion-content, ion-header {
 
   video#videoFondo {
     position: fixed;
-    top: 0;
-    left: -50%;
-    width: 100%;
-    height: -1%;
-    width: auto;
-    height: auto;
-    object-fit: cover; /* Esto asegura que el video cubra todo el contenedor sin deformarse */
-  z-index: -1;
-  }
-
-  .adorno,
-  #welcome-back,
-  .boton {
-    /* Estilos para asegurar que los demás elementos estén por encima del video */
-    position: relative;
-    z-index: 1;
-  }
-
-// Footer
-.adorno,.adorno2 {
-  overflow: visible;
-}
-// Texto
-#welcome-back {
-  color: #000000;
-  text-align: left;
-  font-family: 'Inter-Bold', sans-serif;
-  font-weight: 700;
-  font-size: 800%; 
-}
-//Botones
-.boton, .ActBluet {
-  font-family: 'Inter-Bold', sans-serif;
-  font-size: 200%;
-  display: flex;
-  align-items: center;
-  justify-content: center;  
-}
-
-// Media queries
-@media (max-width: 600px){
-  video#videoFondo {
-    position: fixed;
-    top: 10%;
-    left: -49%;
-    max-width: 200%;
+    top: 30%;
+    left: -1%;
+    max-width: 100%;
     height: 100%;
     width: auto;
     height: auto;
@@ -67,17 +24,52 @@ ion-content, ion-header {
   z-index: -1;
   }
 
-//Texto
-  #welcome-back {
-    font-size: 420%;
+  .adorno,
+  .boton {
+    /* Estilos para asegurar que los demás elementos estén por encima del video */
+    position: relative;
+    z-index: 1;
   }
+
+// Footer
+.adorno {
+  overflow: visible;
+  height: 100%;
+  width: auto;
+    height: auto;
+}
+//Boton
+.boton {
+  top: 200%;
+  font-size: 200%;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  object-fit: cover;
+}
+
+// Media queries
+@media (max-width: 600px){
+  video#videoFondo {
+    position: fixed;
+    top: 25%;
+    left: -1%;
+    max-width: 100%;
+    height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover; /* Esto asegura que el video cubra todo el contenedor sin deformarse */
+  z-index: -1;
+  }
+
   //Botones
-  .boton, .ActBluet {
-    border-radius: 100%;
-    width: 95%;
-    font-size: 190%; 
+  .boton {
+    top: 200%;
+    object-fit: cover;
   }
   .adorno,.adorno2 {
     overflow: visible;
+    width: auto;
+    height: auto;
   }
 }

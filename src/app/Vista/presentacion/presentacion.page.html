@@ -3,26 +3,22 @@
   <video  id="videoFondo" autoplay loop muted playsinline>
     <source src="../../../assets/Videos/Precentacion.mp4" type="video/mp4">
   </video>
-
   <ion-grid>
     <ion-row>
       <!-- Adorno superior -->
-      <ion-col>
+      <ion-col size-sm="12" size-lg="12" size-md="12" size-xs="12" >
         <svg class="adorno" viewBox="0 0 375 224" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M-70 63.5C-70 63.5 1 25.5004 188.5 109C376 192.5 405.5 116 405.5 116L376 -126H1L-70 63.5Z" fill="black" fill-opacity="0.5"/>
           <path d="M445 111.112C445 111.112 373.925 60.3561 186.228 171.886C-1.46899 283.415 -31 181.235 -31 181.235L-1.46899 -142H373.925L445 111.112Z" fill="black" fill-opacity="0.5"/>
         </svg>
       </ion-col>
-      <!-- Texto -->
-      <ion-col size-sm="12" size-lg="12" size-md="12" size-xs="12">
-        <ion-label id="welcome-back"> 
-          <!-- Contenido de texto aquí -->
-        </ion-label>
-      </ion-col>
       <!-- Boton Empezar -->
-      <ion-col size-sm="6" size-lg="6" size-md="6" size-xs="6" >
-        <ion-button class="boton" color="medium" (click)="startBluetoothConnection()">Empezar</ion-button>
+      <ion-col class="boton" size-sm="6" size-lg="6" size-md="6" size-xs="6" >
+        <video width="100%" autoplay loop muted playsinline (click)="startBluetoothConnection()" class="boton">
+          <source src="../../../assets/Videos/Boton.mp4" type="video/mp4">
+        </video>
       </ion-col>
+
     </ion-row>
   </ion-grid> 
 </ion-content>
