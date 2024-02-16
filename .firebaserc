@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "registrodeusuarios-63ef6": {
+      "hosting": {
+        "app": [
+          "registrodeusuarios-63ef6"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "registrodeusuarios-63ef6"
+  }
+}

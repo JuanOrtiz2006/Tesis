@@ -9,13 +9,13 @@ import { Router } from '@angular/router';
 export class InicioPage implements OnInit {
   
   irAPagina(ruta: string) {
-    this.router.navigate([]);
+    this.router.navigate([ruta]); 
   }
 
   tarjetas=[
     {titulo: "Facil",
      imagen: "../../../assets/Videos/Principiante.mp4",
-     click: () => this.irAPagina('../biblioteca-acordes')
+     click: () => this.irAPagina('../nivel')
     },
     {titulo: "Medio",
      imagen: "../../../assets/Videos/Intermedio.mp4",
