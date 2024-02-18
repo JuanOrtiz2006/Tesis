@@ -16,10 +16,6 @@ const routes: Routes = [
     loadChildren: () => import('./Vista/registro-usuario/registro-usuario.module').then( m => m.RegistroUsuarioPageModule)
   },
   {
-    path: 'navegacion',
-    loadChildren: () => import('./Vista/navegacion/navegacion.module').then( m => m.NavegacionPageModule)
-  },
-  {
     path: 'biblioteca-acordes',
     loadChildren: () => import('./Vista/biblioteca-acordes/biblioteca-acordes.module').then( m => m.BibliotecaAcordesPageModule)
   },
@@ -31,6 +27,15 @@ const routes: Routes = [
     path: 'nivel',
     loadChildren: () => import('./Vista/nivel/nivel.module').then( m => m.NivelPageModule)
   },
+  {
+    path: 'inicio',
+    loadChildren: () => import('./Vista/inicio/inicio.module').then( m => m.InicioPageModule)
+  },
+  {
+    path: 'biblioteca',
+    loadChildren: () => import('./Vista/biblioteca/biblioteca.module').then( m => m.BibliotecaPageModule)
+  },
+  
 ];
 
 @NgModule({

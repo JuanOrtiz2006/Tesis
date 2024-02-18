@@ -1,52 +1,386 @@
-// Variables 
-$primary: #ffffff;
-// Estilos generales
-ion-content, ion-header {
-  --background: $primary;
+/* General */
+.registro-de-usuario,
+.registro-de-usuario * {
+  box-sizing: border-box;
 }
-//Contenido
+
+/* Registro de Usuario */
 .registro-de-usuario {
-  background: $primary;
-  width: 100%;
+  background: #ffffff;
+  border-radius: 4%;
+  position: absolute;
+  overflow: hidden;
   height: 100%;
-  position: relative;  
+  width: 100%;
 }
-// Footer
+
+/* Adorno */
 .adorno {
   overflow: visible;
+  position: relative;
+  top: -10%;
 }
-// Texto
-#welcome-back {
-  color: #000000;
-  text-align: left;
-  font-family: 'Inter-Bold', sans-serif;
-  font-weight: 700;
-  font-size: 800%; 
-}
-//Botones
-.Login, .inicioSesion {
-  font-family: 'Inter-Bold', sans-serif;
-  font-size: 150%;
-  display: flex;
-  align-items: center;
-  justify-content: center;  
-}
-//Boton de Login
-.Login, .inicioSesion {
-  width: 90%;
-  padding: 5%;
-  margin: 0 auto; 
 
+.adorno2 {
+  display: none;
 }
-// Imagen de usuario
+
+/* Imagen de Usuario */
 img {
-  width: 35%;
-  height: 45%;
+  position: relative;
+  top: -75%;
+  left: 27%;
+  width: 45%;
+  height: 50%;
+  margin-bottom: 0.5%;
   display: block;
-  margin: 0 auto;
-  border-radius: 100%; 
-  border: 2px solid #000000; // Añadir borde de color negro
-
+  border-radius: 100%;
+  background: #343434;
+  box-shadow: 0.3rem 0.3rem 1rem rgba(0, 0, 0, 0.65);
 }
 
+/* Caja de Inicio de Sesión */
+.login-box {
+  position: absolute;
+  top: 420%; /* Se recomienda ajustar esto de acuerdo a tu diseño */
+  left: 50%;
+  width: 90%;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(35, 32, 32, 0.987);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
 
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.login-box .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #bdb8b8;
+  font-size: 12px;
+}
+
+.login-box form a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #ffffff;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px;
+}
+
+.login-box a:hover {
+  background: #dedede;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #dedede,
+              0 0 25px #dedede,
+              0 0 50px #dedede,
+              0 0 100px #dedede;
+}
+
+.login-box a span {
+  position: absolute;
+  display: block;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%, 100% {
+    left: 100%;
+  }
+}
+
+.login-box a span:nth-child(1) {
+  bottom: 2px;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ffffff);
+  animation: btn-anim1 2s linear infinite;
+}
+
+/* Media Queries */
+@media screen and (min-width: 600px) and (min-height: 300px) {
+  .adorno {
+    top: -60%;
+  }
+  img {
+    top: -225%;
+    left: 37%;
+    width: 25%;
+    height: 50%;
+    margin-bottom: 2%;
+  }
+  .login-box {
+    top: -3500%;
+    width: 80%;
+  }
+  .login-box .user-box input {
+    padding: 3%;
+    margin-top: -5%;
+    margin-bottom: 3%;
+  }
+  .login-box form a {
+    margin-top: 2%;
+    margin-bottom: -5%;
+  }
+}
+
+@media screen and (min-width: 700px) and (min-height: 1000px) {
+  .adorno {
+    top: -30%;
+  }
+  img {
+    top: -90%;
+    left: 30%;
+    width: 45%;
+    height: 50%;
+  }
+  .login-box {
+    top: -2000%;
+    width: 80%;
+  }
+  .login-box .user-box input {
+    padding: 5%;
+    margin-bottom: 6%;
+  }
+  .login-box .user-box label {
+    font-size: 200%;
+  }
+  .login-box form a {
+    margin-top: 2%;
+    margin-bottom: 5%;
+    font-size: 200%;
+  }
+  .adorno2 {
+    display: flex;
+    position: relative;
+    left: -65%;
+    top: -10%;
+    height: 60%;
+    width: 240%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .adorno {
+    top: -30%;
+  }
+  img {
+    top: -60%;
+    left: 23%;
+    width: 55%;
+    height: 50%;
+  }
+  .login-box {
+    top: -2000%;
+    width: 90%;
+  }
+  .login-box .user-box input {
+    padding: 5%;
+    margin-bottom: 6%;
+  }
+  .login-box .user-box label {
+    font-size: 200%;
+  }
+  .login-box form a {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 200%;
+  }
+  .adorno2 {
+    display: flex;
+    position: relative;
+    left: -63%;
+    top: -1%;
+    height: 60%;
+    width: 240%;
+  }
+}
+
+@media screen and (min-width: 800px) and (min-height: 1000px) {
+  .adorno {
+    top: -10%;
+  }
+  img {
+    top: -70%;
+    left: 27%;
+    width: 45%;
+    height: 50%;
+  }
+  .login-box {
+    top: -1600%;
+    width: 80%;
+  }
+  .login-box .user-box input {
+    padding: 3%;
+    margin: 1%;
+    margin-bottom: 3%;
+  }
+  .login-box .user-box label {
+    font-size: 200%;
+  }
+  .login-box form a {
+    margin-top: 5%;
+    font-size: 200%;
+  }
+}
+
+@media screen and (min-height: 800px) {
+  .adorno {
+    top: 1%;
+  }
+  img {
+    top: -60%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+  }
+  .login-box {
+    top: -300%;
+    width: 80%;
+  }
+  .login-box .user-box input {
+    padding: 1%;
+    margin: 3%;
+    margin-bottom: 3%;
+  }
+  .login-box .user-box label {
+    font-size: 100%;
+  }
+  .adorno2 {
+      display: flex;
+      position: absolute;
+      left: -65%;
+      top: 1000%;
+      height: 4000%;
+      width: 240%;
+  }
+}
+@media screen and (min-height: 900px) {
+  .adorno {
+    top: 1%;
+  }
+  img {
+    top: -60%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+  }
+  .login-box {
+    top: -300%;
+    width: 80%;
+  }
+  .login-box .user-box input {
+    padding: 1%;
+    margin: 3%;
+    margin-bottom: 10%;
+  }
+  .login-box .user-box label {
+    font-size: 100%;
+  }
+  .adorno2 {
+      display: flex;
+      position: absolute;
+      left: -70%;
+      top: 1500%;
+      height: 4000%;
+      width: 240%;
+  }
+}
+
+@media screen and (min-width: 900px) and (min-height: 400px) {
+  .adorno {
+    top: -60%;
+  }
+  img {
+    top: -240%;
+    left: 37%;
+    width: 25%;
+    height: 50%;
+  }
+  .login-box {
+    top: -5200%;
+    width: 80%;
+  }
+  .login-box .user-box input {
+    padding: 3%;
+    margin-top: -5%;
+    margin-bottom: 3%;
+  }
+  .login-box .user-box label {
+    font-size: 100%;
+  }
+  .login-box form a {
+    margin-top: 2%;
+    margin-top: -5%;
+    margin-bottom: -5%;
+    font-size: 100%;
+  }
+}
+
+@media screen and (min-width: 1000px) and (min-height: 600px) {
+  .adorno {
+    top: -50%;
+  }
+  img {
+    top: -200%;
+    left: 40%;
+    width: 25%;
+    height: 50%;
+    margin-bottom: 1%;
+  }
+  .login-box {
+    top: -5600%;
+    width: 80%;
+  }
+  .login-box .user-box input {
+    padding: 3%;
+    margin-bottom: 3%;
+  }
+  .login-box .user-box label {
+    font-size: 150%;
+  }
+  .login-box form a {
+    margin-top: 2%;
+    margin: 5%;
+    margin-bottom: 1%;
+    font-size: 150%;
+  }
+}

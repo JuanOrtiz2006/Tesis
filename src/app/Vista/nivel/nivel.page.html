@@ -1,26 +1,19 @@
-<ion-toolbar>
-  <ion-back-button slot="start" defaultHref="../inicio"></ion-back-button>
-  <ion-menu-button slot="end"></ion-menu-button>
-</ion-toolbar>
-<ion-content>
-  <ion-grid>
+ <ion-grid class="inicio">
     <ion-row>
-      <ion-col size-sm="12" size-lg="12" size-md="12" size-xs="12">
-        <video width="100%" id="videoFondo" autoplay loop muted playsinline>
+      <ion-col size="12">
+        <ion-label (click)="irPagina()">Regresar
+        </ion-label>
+      </ion-col>
+      <ion-col size="12" >
+        <video width="100%"  height="100%" id="videoFondo" autoplay loop muted playsinline>
           <source [src]="videos[videoIndex]" type="video/mp4">
         </video>
       </ion-col>
-      <ion-col>
-        <ion-button (click)="cambiarVideoYEnviarNumero()">Siguiente</ion-button>
+      <ion-col size="11" *ngIf="videoIndex > 0">
+        <ion-label (click)="regresar()"><ion-icon name="arrow-back"></ion-icon></ion-label>
       </ion-col>
-      <ion-col>
-        <!-- Asegúrate de pasar el nombre del LED como argumento -->
-        <ion-button (click)="apagar('led1')" > {{encendido ? 'Encendido': 'Apagado'}}
-        </ion-button>
+      <ion-col size="1">
+        <ion-label (click)="cambiarVideoYEnviarNumero()"><ion-icon name="arrow-forward"></ion-icon></ion-label>
       </ion-col>
     </ion-row>
   </ion-grid>
-  <svg class="adorno2" viewBox="0 0 375 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M445 160.5C445 160.5 374 198.5 186.5 115C-1 31.4996 -30.5 108 -30.5 108L-1 350L374 350L445 160.5Z" fill="black" fill-opacity="0.5"/>
-    <path d="M-70 112.888C-70 112.888 1.07466 163.644 188.772 52.1143C376.469 -59.4152 406 42.7651 406 42.7651L376.469 366L1.07466 366L-70 112.888Z" fill="black" fill-opacity="0.5"/>    </svg>
-</ion-content>

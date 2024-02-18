@@ -1,75 +1,367 @@
-// Variables 
-$primary: #ffffff;
-// Estilos generales
-ion-content, ion-header {
-  --background: $primary;
-}
-//Contenido
-.presentacion {
-  background: $primary;
-  width: 100%;
-  height: 100%;
-  position: relative;  
-}
-
-  video#videoFondo {
-    position: fixed;
-    top: 30%;
-    left: -1%;
-    max-width: 100%;
-    height: 100%;
-    width: auto;
-    height: auto;
-    object-fit: cover; /* Esto asegura que el video cubra todo el contenedor sin deformarse */
-  z-index: -1;
-  }
-
-  .adorno,
-  .boton {
-    /* Estilos para asegurar que los demás elementos estén por encima del video */
-    position: relative;
-    z-index: 1;
-  }
-
-// Footer
-.adorno {
-  overflow: visible;
-  height: 100%;
-  width: auto;
-    height: auto;
-}
-//Boton
+.presentacion *,
 .boton {
-  top: 200%;
-  font-size: 200%;
-  display: flex;
-  align-items: center;
-  justify-content: center;  
-  object-fit: cover;
+  box-sizing: border-box;
+}
+.presentacion {
+  background: #ffffff;
+  border-radius: 4%;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+#Titulo, .boton {
+  color: #000000;
+  text-align: left;
+  font-family: "Inika-Regular";
+  font-size: 400%;
+  font-weight: 100;
+  position: relative;
+  top: -90%;
+  text-shadow: 4px 2px 4px rgba(0, 0, 0, 0.5); /* Cambia estos valores según tus preferencias */
+
+}
+.adorno {
+  position: relative;
+  left: -70%;
+  top: -10%;
+  height: 80%;
+  width: 240%;
+}
+.adorno2 {
+  position: relative;
+  left: -18%;
+  top: -2%;
+  height: 60%;
+  width: 140%;
 }
 
-// Media queries
-@media (max-width: 600px){
-  video#videoFondo {
-    position: fixed;
-    top: 25%;
-    left: -1%;
-    max-width: 100%;
-    height: 100%;
-    width: auto;
-    height: auto;
-    object-fit: cover; /* Esto asegura que el video cubra todo el contenedor sin deformarse */
-  z-index: -1;
+.boton {
+  position: relative;
+  top: -100%;
+  left: 50%;
+  width: 45%;
+  height: 100%;
+  --background: #333;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  --justify-content: center;
+  cursor: pointer;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  --align-items: center;
+  --font-family: Consolas, Courier New, monospace;
+  --border: solid #404c5d 1px;
+  font-size: 100%;
+  color: rgb(161, 161, 161);
+  -webkit-transition: 500ms;
+  transition: 500ms;
+  border-radius: 5px;
+  background: linear-gradient(145deg, #2e2d2d, #212121);
+  -webkit-box-shadow: -1px -5px 15px #41465b, 5px 5px 15px #41465b,
+    inset 5px 5px 10px #212121, inset -5px -5px 10px #212121;
+  box-shadow: -1px -5px 15px #41465b, 5px 5px 15px #41465b,
+    inset 5px 5px 10px #212121, inset -5px -5px 10px #212121;
+}
+
+button:hover {
+  -webkit-box-shadow: 1px 1px 13px #20232e, -1px -1px 13px #545b78;
+  box-shadow: 1px 1px 13px #20232e, -1px -1px 13px #545b78;
+  color: #d6d6d6;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+button:active {
+  -webkit-box-shadow: 1px 1px 13px #20232e, -1px -1px 33px #545b78;
+  box-shadow: 1px 1px 13px #20232e, -1px -1px 33px #545b78;
+  color: #d6d6d6;
+  -webkit-transition: 100ms;
+  transition: 100ms;
+}
+
+
+@media screen and (min-width: 400px) {
+  #Titulo {
+    top: -100%;
   }
 
-  //Botones
+  .adorno {
+    left: -69%;
+    top: -15%;
+    height: 80%;
+    width: 240%;
+  }
+
+  .adorno2 {
+    left: -15%;
+    top: -20%;
+    height: 80%;
+    width: 130%;
+  }
+
   .boton {
-    top: 200%;
-    object-fit: cover;
+    top: -100%;
+    left: 50%;
   }
-  .adorno{
-    overflow: visible;
-    width: auto;
-    height: auto;
-  }
+
 }
+
+@media screen and (min-width: 500px) {
+  #Titulo {
+    top: -270%;
+  }
+
+  .adorno {
+    left: -104%;
+    top: -15%;
+    height: 60%;
+    width: 307%;
+  }
+
+  .adorno2 {
+    left: -13%;
+    top: -35%;
+    height: 80%;
+    width: 125%;
+  }
+
+  .boton {
+    top: -320%;
+    left: 50%;
+  }
+
+}
+
+@media screen and (min-width:600px) and (min-height: 300px)
+{
+.adorno
+{
+  top: -35%;
+  
+}
+
+#Titulo {
+  top: -450%;
+}
+.boton {
+  top: -1190%;
+  left: 50%;
+  width: 30%;
+}
+.adorno2
+{
+  position: relative;
+  top: -160%;
+  left: -25%;
+  width: 150%;
+  height: 160%;
+}
+}
+
+@media screen and (min-height: 700px) {
+  #Titulo {
+    top: -100%;
+  }
+
+  .adorno {
+    left: -69%;
+    top: -15%;
+    height: 80%;
+    width: 240%;
+  }
+
+  .adorno2 {
+    left: -17%;
+    top: -16%;
+    height: 105%;
+    width: 130%;
+  }
+
+  .boton {
+    top: -100%;
+    left: 50%;
+  }
+
+}
+
+@media screen and (min-width:700px) and (min-height: 300px)
+{
+.adorno
+{
+  top: -36%;
+}
+
+#Titulo {
+  top: -450%;
+  font-size: 500%;
+}
+.boton {
+  top: -1100%;
+  width: 30%;
+  font-size: 200%;
+}
+
+.adorno2
+{
+  position: relative;
+  top: -200%;
+  left: -47%;
+  width: 190%;
+  height: 186%;
+}
+
+}
+
+@media screen and (min-height: 800px) {
+  #Titulo {
+    top: -80%;
+    font-size: 500%;
+  }
+
+  .adorno {
+    left: -69%;
+    top: -4%;
+    height: 80%;
+    width: 240%;
+  }
+
+  .adorno2 {
+    left: -16%;
+    top: -20%;
+    height: 100%;
+    width: 130%;
+  }
+
+  .boton {
+    position: relative;
+    width: 40%;
+    top: -20%;
+    left: 50%;
+    font-size: 200%;
+  }
+
+}
+
+@media screen and (min-width:800px) and (min-height: 300px)
+{
+.adorno
+{
+  top: -35%;
+}
+
+#Titulo {
+  top: -540%;
+  font-size: 500%;
+}
+.boton {
+  top: -700%;
+  width: 30%;
+  font-size: 200%;
+}
+
+}
+
+@media screen and (min-height: 900px) {
+  #Titulo {
+    top: -80%;
+    font-size: 500%;
+  }
+
+  .adorno {
+    left: -69%;
+    top: -4%;
+    height: 80%;
+    width: 240%;
+  }
+
+  .adorno2 {
+    left: -16%;
+    top: -20%;
+    height: 100%;
+    width: 130%;
+  }
+
+  .boton {
+    position: relative;
+    width: 40%;
+    top: -20%;
+    left: 50%;
+    font-size: 200%;
+  }
+
+}
+
+@media screen and (min-width:900px) and (min-height: 400px)
+{
+.adorno
+{
+  top: -35%;
+}
+
+#Titulo {
+  top: -560%;
+  font-size: 500%;
+}
+.boton {
+  top: -1200%;
+  width: 30%;
+  font-size: 200%;
+}
+
+}
+
+@media screen and (min-height: 1000px) {
+  #Titulo {
+    top: -130%;
+    font-size: 700%;
+  }
+
+  .adorno {
+    left: -69%;
+    top: -20%;
+    height: 80%;
+    width: 240%;
+  }
+
+  .adorno2 {
+    left: -16%;
+    top: -30%;
+    height: 100%;
+    width: 130%;
+  }
+
+  .boton {
+    position: relative;
+    width: 40%;
+    top: -200%;
+    left: 50%;
+    font-size: 200%;
+  }
+
+}
+
+@media screen and (min-width:1000px) and (min-height: 700px)
+{
+.adorno
+{
+  top: -35%;
+}
+
+#Titulo {
+  top: -270%;
+  font-size: 700%;
+}
+.boton {
+  top: -530%;
+  width: 30%;
+  font-size: 200%;
+}
+
+.adorno2
+{
+  top: -110%;
+  height: 200%;
+}
+
+}
+

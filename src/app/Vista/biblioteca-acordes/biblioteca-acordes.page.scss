@@ -1,114 +1,68 @@
-@media (min-width: 600px){
-    .inicio, .inicio * 
-    {
-        box-sizing: border-box;
-    }
-    .inicio 
-    {
-        background: #ffffff;
-        border-radius: 40px;
-        width: 100%;
-        height: 100%;
-        position: relative;
-        overflow: hidden;
-    }
-    
-    ion-header{
-        padding: 5%;
-    } 
-    .ellipse 
-    {
-        background: #ffffff;
-        border-radius: 50%;
-        top: 3%;
-        left: 3%;
-        width: 20%;
-        height: 90%;
-        position: absolute;
-    } 
-    img
-    {
-        width: 45%;
-        height: 95%;
-        position: absolute;
-        left: 3%;
-        top: 3%;
-    }
-    ion-img{
-        width: 20%;
-        height: 20%;
-    }
-    ion-card{
-        top: 80%;
-        margin: 5%;
-        width: 90%;
-        height: 150%;
-    }
-    .adorno2 
-    {
-      width: auto; 
-      height: auto;
-      position: absolute;
-      overflow: visible;  
-      right: 0; 
-      top: 70%;
-      transform: translate(0, 0);
-    }    
+ion-content{
+    --background-color: #ffffff;
 }
-@media (max-width: 600px){
-    .inicio, .inicio * 
-    {
-        box-sizing: border-box;
+.card {
+    position: relative;
+    width: 200px;
+    height: 250px;
+    border-radius: 14px;
+    z-index: 1111;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+    ;
+  }
+  
+  .bg {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 190px;
+    height: 240px;
+    z-index: 2;
+    background: rgba(255, 255, 255, .95);
+    backdrop-filter: blur(24px);
+    border-radius: 10px;
+    overflow: hidden;
+    outline: 2px solid white;
+  }
+  
+  .blob {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    opacity: 1;
+    filter: blur(12px);
+    animation: blob-bounce 5s infinite ease;
+  }
+  
+  @keyframes blob-bounce {
+    0% {
+      transform: translate(-100%, -100%) translate3d(0, 0, 0);
     }
-    .inicio 
-    {
-        background: #ffffff;
-        border-radius: 40px;
-        width: 100%;
-        height: 100%;
-        position: relative;
-        overflow: hidden;
+  
+    25% {
+      transform: translate(-100%, -100%) translate3d(100%, 0, 0);
     }
-    ion-header{
-        padding: 5%;
-    } 
-    .ellipse 
-    {
-        background: #ffffff;
-        border-radius: 50%;
-        top: 3%;
-        left: 3%;
-        width: 20%;
-        height: 90%;
-        position: absolute;
-    } 
-    img
-    {
-        width: 45%;
-        height: 95%;
-        position: absolute;
-        left: 3%;
-        top: 3%;
+  
+    50% {
+      transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
     }
-
-    ion-img{
-        width: 20%;
-        height: 20%;
+  
+    75% {
+      transform: translate(-100%, -100%) translate3d(0, 100%, 0);
     }
-    ion-card{
-        top: 45%;
-        margin: 5%;
-        width: 90%;
-        height: 100%;
+  
+    100% {
+      transform: translate(-100%, -100%) translate3d(0, 0, 0);
     }
-    .adorno2 
-    {
-      width: auto; 
-      height: auto;
-      position: absolute;
-      overflow: visible;  
-      right: 0; 
-      top: 70%;
-      transform: translate(0, 0);
-    }
-}
+  }
+  

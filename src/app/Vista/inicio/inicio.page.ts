@@ -8,13 +8,23 @@ import { Router } from '@angular/router';
 })
 export class InicioPage implements OnInit {
   
+  constructor(private router: Router) {}
+
   irAPagina(ruta: string) {
     this.router.navigate([ruta]); 
   }
 
+  irPagina() {
+    this.router.navigate(['../biblioteca']); 
+  }
+
+  irPagina2() {
+    this.router.navigate(['../biblioteca']); 
+  }
+
   tarjetas=[
     {titulo: "Facil",
-     imagen: "../../../assets/Videos/Principiante.mp4",
+     imagen: "../../../assets/Videos/.mp4",
      click: () => this.irAPagina('../nivel')
     },
     {titulo: "Medio",
@@ -25,14 +35,8 @@ export class InicioPage implements OnInit {
      imagen: "../../../assets/Videos/Experto.mp4",
      click: () => this.irAPagina('../nivel')
     }
-    
-  ]
+  ];
 
-  constructor(private router: Router) 
-  {
-  }
-
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { AutenticacionService } from 'src/app/Servicio/autenticacion.servie';
-import { Router } from '@angular/router';
+import { Router} from '@angular/router';
+import { AlertController } from '@ionic/angular';
 @Component({
   selector: 'app-registro-usuario',
   templateUrl: './registro-usuario.page.html',
@@ -9,37 +10,41 @@ import { Router } from '@angular/router';
 })
 export class RegistroUsuarioPage implements OnInit {
  
-  
-  constructor(public AutenticacionService: AutenticacionService, private router:Router) { }
+  errorRegistro: boolean = false; // Variable para controlar la visibilidad del mensaje de error
 
-iniciarSesion(formulario: NgForm)
-{
-  this.AutenticacionService.iniciarSesion(
-    formulario.value.correo,
-    formulario.value.clave
-  ).then(info=>{
-    console.log("Usuario registrado"),
-    this.router.navigate(['../navegacion']); // Ajusta la ruta según tu estructura
-      
-  }).catch(error=>
-    {
-      console.log("Error al iniciar sesion")
-    }
-  )
+  constructor(public AutenticacionService: AutenticacionService, private router:Router,     private alertController: AlertController
+    ) { }
 
-}
-
-registrarUsuario(formulario: NgForm) {
-  this.AutenticacionService.registrarUsuario(formulario.value.correo, formulario.value.clave)
-    .then((info) => {
+  async iniciarSesion(formulario: NgForm) {
+    try {
+      await this.AutenticacionService.iniciarSesion(formulario.value.correo, formulario.value.clave);
       console.log("Usuario registrado");
-    }).catch((error) => {
-      console.log("Error al registrar usuario. Intente de nuevo");
-      this.router.navigate(['../registro-usuario']); // Ajusta la ruta según tu estructura
+      this.router.navigate(['../inicio']); // Ajusta la ruta según tu estructura
+    } catch (error) {
+      console.log("Error al iniciar sesion");
+      this.mostrarAlerta("Error al iniciar sesion", "Ingrese el usuario o contraseña correcta.");
+    }
+  }
 
+  async registrarUsuario(formulario: NgForm) {
+    try {
+      await this.AutenticacionService.registrarUsuario(formulario.value.correo, formulario.value.clave);
+      console.log("Usuario registrado");
+    } catch (error) {
+      console.log("Error al registrar usuario");
+      this.mostrarAlerta("Error al registrar usuario", "Ingrese un correo valido, o una contraseña con 6 o mas digitos.");
+    }
+  }
+
+  async mostrarAlerta(titulo: string, mensaje: string) {
+    const alert = await this.alertController.create({
+      header: titulo,
+      message: mensaje,
+      buttons: ['OK']
     });
-}
 
+    await alert.present();
+  }
 
 
   ngOnInit() {
