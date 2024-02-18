@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Firestore,doc,setDoc } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-nivel',
   templateUrl: './nivel.page.html',
   styleUrls: ['./nivel.page.scss'],
 })
 export class NivelPage implements OnInit {
+  
   videos: string[] = [
     "../../../assets/Videos/NotaDo.mp4",
     "../../../assets/Videos/NotaRe.mp4",
@@ -17,8 +19,15 @@ export class NivelPage implements OnInit {
     "../../../assets/Videos/NotaSi.mp4"
   ];
   videoIndex: number = 0;
+  
   ledstate:any;
   encendido:boolean=false;
+  encendido2:boolean=false;
+  encendido3:boolean=false;
+  encendido4:boolean=false;
+  encendido5:boolean=false;
+  encendido6:boolean=false;
+  encendido7:boolean=false;
 
   constructor(private db:Firestore, private router:Router) {
   
@@ -36,29 +45,60 @@ export class NivelPage implements OnInit {
     
     // Envía el número, en este caso el índice del video actual
     if (this.videoIndex === 0) {
-      this.apagar('led1');
+    const ledState = doc(this.db, 'ControlTeclado', 'led1'); // RUTA DE TABLA EN LA BD
+    setDoc(ledState, { encender: true}); // CAMBIA EL ATRIBUTO DE LA TABLA
+  
+    }else{
+      const ledState = doc(this.db, 'ControlTeclado', 'led1'); // RUTA DE TABLA EN LA BD
+      setDoc(ledState, { encender: false}); // CAMBIA EL ATRIBUTO DE LA TABLA
+    
     }
     if (this.videoIndex === 1) {
-      this.apagar('led2');
+    const ledState = doc(this.db, 'ControlTeclado', 'led2'); // RUTA DE TABLA EN LA BD
+    setDoc(ledState, { encender: true}); // CAMBIA EL ATRIBUTO DE LA TABLA
+    }else{
+      const ledState = doc(this.db, 'ControlTeclado', 'led2'); // RUTA DE TABLA EN LA BD
+      setDoc(ledState, { encender: false}); // CAMBIA EL ATRIBUTO DE LA TABLA
+    
     }
     if (this.videoIndex === 2) {
-      this.apagar('led3');
+    const ledState = doc(this.db, 'ControlTeclado', 'led3'); // RUTA DE TABLA EN LA BD
+    setDoc(ledState, { encender: true}); // CAMBIA EL ATRIBUTO DE LA TABLA
+    } else{
+      const ledState = doc(this.db, 'ControlTeclado', 'led3'); // RUTA DE TABLA EN LA BD
+    setDoc(ledState, { encender: false}); // CAMBIA EL ATRIBUTO DE LA TABLA
+  
     }
     if (this.videoIndex === 3) {
-      this.apagar('led4');
+    const ledState = doc(this.db, 'ControlTeclado', 'led4'); // RUTA DE TABLA EN LA BD
+    setDoc(ledState, { encender: true}); // CAMBIA EL ATRIBUTO DE LA TABLA
+    } else{
+      const ledState = doc(this.db, 'ControlTeclado', 'led4'); // RUTA DE TABLA EN LA BD
+    setDoc(ledState, { encender: false}); // CAMBIA EL ATRIBUTO DE LA TABLA
     }
     if (this.videoIndex === 4) {
-      this.apagar('led5');
+    const ledState = doc(this.db, 'ControlTeclado', 'led5'); // RUTA DE TABLA EN LA BD
+    setDoc(ledState, { encender: true}); // CAMBIA EL ATRIBUTO DE LA TABLA
+    } else{
+      const ledState = doc(this.db, 'ControlTeclado', 'led5'); // RUTA DE TABLA EN LA BD
+      setDoc(ledState, { encender: false}); // CAMBIA EL ATRIBUTO DE LA TABLA
+    
     }
     if (this.videoIndex === 5) {
-      this.apagar('led6');
+    const ledState = doc(this.db, 'ControlTeclado', 'led6'); // RUTA DE TABLA EN LA BD
+    setDoc(ledState, { encender: true}); // CAMBIA EL ATRIBUTO DE LA TABLA
+    } else{
+      const ledState = doc(this.db, 'ControlTeclado', 'led6'); // RUTA DE TABLA EN LA BD
+    setDoc(ledState, { encender: false}); // CAMBIA EL ATRIBUTO DE LA TABLA
+    
     }
     if (this.videoIndex === 6) {
-      this.apagar('led7');
-    }
-    if (this.videoIndex === 7) {
-      this.apagar('led8');
-    }
+    const ledState = doc(this.db, 'ControlTeclado', 'led7'); // RUTA DE TABLA EN LA BD
+    setDoc(ledState, { encender: true}); // CAMBIA EL ATRIBUTO DE LA TABLA
+    } else{
+      const ledState = doc(this.db, 'ControlTeclado', 'led7'); // RUTA DE TABLA EN LA BD
+    setDoc(ledState, { encender: false}); // CAMBIA EL ATRIBUTO DE LA TABLA
+  }
     // Reproducir el nuevo video
     const videoElement = document.getElementById("videoFondo") as HTMLVideoElement;
     videoElement.src = this.videos[this.videoIndex];
@@ -71,36 +111,66 @@ export class NivelPage implements OnInit {
     const videoElement = document.getElementById("videoFondo") as HTMLVideoElement;
     videoElement.src = this.videos[this.videoIndex];
     videoElement.play();
+    // Envía el número, en este caso el índice del video actual
     if (this.videoIndex === 0) {
-      this.apagar('led1');
+      const ledState = doc(this.db, 'ControlTeclado', 'led1'); // RUTA DE TABLA EN LA BD
+      setDoc(ledState, { encender: true}); // CAMBIA EL ATRIBUTO DE LA TABLA
+    
+      }else{
+        const ledState = doc(this.db, 'ControlTeclado', 'led1'); // RUTA DE TABLA EN LA BD
+        setDoc(ledState, { encender: false}); // CAMBIA EL ATRIBUTO DE LA TABLA
+      
+      }
+      if (this.videoIndex === 1) {
+      const ledState = doc(this.db, 'ControlTeclado', 'led2'); // RUTA DE TABLA EN LA BD
+      setDoc(ledState, { encender: true}); // CAMBIA EL ATRIBUTO DE LA TABLA
+      }else{
+        const ledState = doc(this.db, 'ControlTeclado', 'led2'); // RUTA DE TABLA EN LA BD
+        setDoc(ledState, { encender: false}); // CAMBIA EL ATRIBUTO DE LA TABLA
+      
+      }
+      if (this.videoIndex === 2) {
+      const ledState = doc(this.db, 'ControlTeclado', 'led3'); // RUTA DE TABLA EN LA BD
+      setDoc(ledState, { encender: true}); // CAMBIA EL ATRIBUTO DE LA TABLA
+      } else{
+        const ledState = doc(this.db, 'ControlTeclado', 'led3'); // RUTA DE TABLA EN LA BD
+      setDoc(ledState, { encender: false}); // CAMBIA EL ATRIBUTO DE LA TABLA
+    
+      }
+      if (this.videoIndex === 3) {
+      const ledState = doc(this.db, 'ControlTeclado', 'led4'); // RUTA DE TABLA EN LA BD
+      setDoc(ledState, { encender: true}); // CAMBIA EL ATRIBUTO DE LA TABLA
+      } else{
+        const ledState = doc(this.db, 'ControlTeclado', 'led4'); // RUTA DE TABLA EN LA BD
+      setDoc(ledState, { encender: false}); // CAMBIA EL ATRIBUTO DE LA TABLA
+      }
+      if (this.videoIndex === 4) {
+      const ledState = doc(this.db, 'ControlTeclado', 'led5'); // RUTA DE TABLA EN LA BD
+      setDoc(ledState, { encender: true}); // CAMBIA EL ATRIBUTO DE LA TABLA
+      } else{
+        const ledState = doc(this.db, 'ControlTeclado', 'led5'); // RUTA DE TABLA EN LA BD
+        setDoc(ledState, { encender: false}); // CAMBIA EL ATRIBUTO DE LA TABLA
+      
+      }
+      if (this.videoIndex === 5) {
+      const ledState = doc(this.db, 'ControlTeclado', 'led6'); // RUTA DE TABLA EN LA BD
+      setDoc(ledState, { encender: true}); // CAMBIA EL ATRIBUTO DE LA TABLA
+      } else{
+        const ledState = doc(this.db, 'ControlTeclado', 'led6'); // RUTA DE TABLA EN LA BD
+      setDoc(ledState, { encender: false}); // CAMBIA EL ATRIBUTO DE LA TABLA
+      
+      }
+      if (this.videoIndex === 6) {
+      const ledState = doc(this.db, 'ControlTeclado', 'led7'); // RUTA DE TABLA EN LA BD
+      setDoc(ledState, { encender: true}); // CAMBIA EL ATRIBUTO DE LA TABLA
+      } else{
+        const ledState = doc(this.db, 'ControlTeclado', 'led7'); // RUTA DE TABLA EN LA BD
+      setDoc(ledState, { encender: false}); // CAMBIA EL ATRIBUTO DE LA TABLA
     }
-    if (this.videoIndex === 1) {
-      this.apagar('led2');
-    }
-    if (this.videoIndex === 2) {
-      this.apagar('led3');
-    }
-    if (this.videoIndex === 3) {
-      this.apagar('led4');
-    }
-    if (this.videoIndex === 4) {
-      this.apagar('led5');
-    }
-    if (this.videoIndex === 5) {
-      this.apagar('led6');
-    }
-    if (this.videoIndex === 6) {
-      this.apagar('led7');
-    }
-    if (this.videoIndex === 7) {
-      this.apagar('led8');
-    }
+    
   }
     
 
   apagar(led: string) {
-    this.encendido = !this.encendido;
-    const ledState = doc(this.db, 'ControlTeclado', led); // RUTA DE TABLA EN LA BD
-    setDoc(ledState, { encender: this.encendido}); // CAMBIA EL ATRIBUTO DE LA TABLA
-  }
+    }
 }
